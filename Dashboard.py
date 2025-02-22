@@ -1,8 +1,14 @@
+import os
+import dotenv
+from dotenv import load_dotenv
 import pandas as pd
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import streamlit as st
 import plotly.express as px
+
+load_dotenv()
+folder_id = os.environ.get("FOLDER_ID")
 
 # Import file with password to the service account
 filename = "google.json"
