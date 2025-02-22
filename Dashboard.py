@@ -5,7 +5,7 @@ import streamlit as st
 import plotly.express as px
 
 # Import file with password to the service account
-filename = "large-language-models-437500-8f75cfce8601.json"
+filename = "google.json"
 scopes = [
     "https://spreadsheets.google.com/feeds",
     "https://www.googleapis.com/auth/drive"
