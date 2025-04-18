@@ -12,6 +12,6 @@ Esse site foi construído usando essas tecnologias:
 
 ## Recursos
 
-📊 Dois gráficos com Desempenho e Custo e Benefício.
-🗂️ Cartões apresentando valor e quantidade de memória ram.
-📋 Lista suspensa para destacar o modelo escolhido.
+- 📊 Dois gráficos com Desempenho e Custo e Benefício.
+- 🗂️ Cartões apresentando valor e quantidade de memória ram.
+- 📋 Lista suspensa para destacar o modelo escolhido.
