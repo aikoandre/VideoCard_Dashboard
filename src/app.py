@@ -13,6 +13,23 @@ st.set_page_config(
     page_icon=':bar_chart:',
 )
 
+st.markdown("""
+<style>
+.card-custom {
+    background: #222 !important;
+    color: #fff !important;
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px #00000010;
+    border: 1px solid #222;
+    margin-bottom: 8px;
+}
+.card-custom .label { font-size: 20px; color: #ccc; }
+.card-custom .value { font-size: 28px; font-weight: bold; color: #fff; }
+</style>
+""", unsafe_allow_html=True)
+
 placas = df['Placa de Vídeo'].tolist()
 
 col1, col2, col3 = st.columns(3, gap="large")
@@ -25,24 +42,25 @@ dados_placa = df[df['Placa de Vídeo'] == placa_selecionada].iloc[0]
 with col1:
     st.markdown(
         f"""
-        <div style="background-color:#212121; border-radius:10px; padding:10px; text-align:center; box-shadow:0 2px 8px #00000010;">
-            <span style="font-size:20px; color:#888;">Valor</span><br>
-            <span style="font-size:28px; font-weight:bold;">R$ {int(dados_placa['Valor']):,}</span>
+        <div class="card-custom">
+            <span class="label">Valor</span><br>
+            <span class="value">R$ {int(dados_placa['Valor']):,}</span>
         </div>
-        """,
-        unsafe_allow_html=True
+        """, unsafe_allow_html=True
     )
 
 with col3:
     st.markdown(
         f"""
-        <div style="background-color:#212121; border-radius:12px; padding:10px; text-align:center; box-shadow:0 2px 8px #00000010;">
-            <span style="font-size:20px; color:#888;">VRAM</span><br>
-            <span style="font-size:28px; font-weight:bold;">{dados_placa['VRAM']}</span>
+        <div class="card-custom">
+            <span class="label">VRAM</span><br>
+            <span class="value">{dados_placa['VRAM']}</span>
         </div>
-        """,
-        unsafe_allow_html=True
+        """, unsafe_allow_html=True
     )
+
+
+st.markdown("<div style='height: 24px;'></div>", unsafe_allow_html=True)
 
 base = alt.Chart(df).encode(
     x=alt.X('Placa de Vídeo', sort=None, axis=alt.Axis(title=None)),
