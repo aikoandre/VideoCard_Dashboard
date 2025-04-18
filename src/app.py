@@ -44,7 +44,7 @@ with col1:
         f"""
         <div class="card-custom">
             <span class="label">Valor</span><br>
-            <span class="value">R$ {int(dados_placa['Valor']):,}</span>
+            <span class="value">R$ {format(int(dados_placa['Valor']), ',').replace(',', '.')}</span>
         </div>
         """, unsafe_allow_html=True
     )
