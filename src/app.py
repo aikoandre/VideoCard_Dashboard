@@ -1,8 +1,10 @@
 import streamlit as st
 import altair as alt
 from utils import carregar_dados
+import os
 
-df = carregar_dados('../data/Hardware.csv')
+csv_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'Hardware.csv')
+df = carregar_dados(csv_path)
 df = df.sort_values(by='1080p Ultra', ascending=True).reset_index(drop=True)
 
 st.set_page_config(
