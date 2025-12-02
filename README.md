@@ -6,7 +6,7 @@ A dashboard for comparing graphics cards performance and prices.
 
 ## 🔗 Live Demo
 
-**[View Dashboard on Streamlit Cloud](https://videocard-dashboard.streamlit.app)**
+**[View Dashboard on Streamlit Cloud](https://videocard-dashboard.streamlit.app/)**
 
 ## Features
 
