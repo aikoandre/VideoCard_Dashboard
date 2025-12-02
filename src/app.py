@@ -11,6 +11,8 @@ st.set_page_config(
     page_icon=':bar_chart:',
 )
 
+st.markdown("<h1 style='text-align: center;'>🎮 Graphics Card Dashboard</h1>", unsafe_allow_html=True)
+
 st.markdown("""
 <style>
 .card-custom {
